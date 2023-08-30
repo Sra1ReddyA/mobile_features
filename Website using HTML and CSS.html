@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Website using HTML and CSS</title>
+  
+<link rel="stylesheet" href="./Website using HTML and CSS_files/style.css"></head>
+<body>
+  <div class="main">
+    <nav>
+      <div class="logo">
+        <img src="./Website using HTML and CSS_files/logo.png">
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="http://127.0.0.1:5500/index.html#">Home</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Phone</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Accessories</a></li>
+          <li><a href="http://127.0.0.1:5500/index.html#">Cart</a></li>
+        </ul>
+      </div>
+    </nav>  
+      <div class="information">
+        <div class="overlay"></div>
+       <img src="./Website using HTML and CSS_files/mobile.png" class="mobile">
+        <div id="circle" style="transform: rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(-90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg) rotate(90deg);">
+          <div class="feature one">
+            <img src="./Website using HTML and CSS_files/camera.png">
+            <div>
+              <h1>Camera</h1>
+              <p>12MP , Wide Angle Lens</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img src="./Website using HTML and CSS_files/processor.png">
+            <div>
+              <h1>Processor</h1>
+              <p>Snapdragon Octa-core 11nm</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="./Website using HTML and CSS_files/display.png">
+            <div>
+              <h1>Display</h1>
+              <p>6.5" Mini-Drop Fullscreen</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="./Website using HTML and CSS_files/battery.png">
+            <div>
+              <h1>Battery</h1>
+              <p>5000mAh, 720Hrs Standby</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="./Website using HTML and CSS_files/arrow.png" id="UpBtn">
+        <h3>Features</h3>
+        <img src="./Website using HTML and CSS_files/arrow.png" id="downBtn">
+      </div>
+  </div>  
+
+  <script>
+    var circle=document.getElementById("circle");
+    var UpBtn=document.getElementById("UpBtn");
+    var downBtn=document.getElementById("downBtn");
+
+    var rotateValue = circle.style.transform;
+    var rotateSum;
+
+    UpBtn.onclick = function() 
+    {
+      rotateSum = rotateValue + "rotate(-90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+    }
+    downBtn.onclick = function() 
+    {
+      rotateSum = rotateValue + "rotate(90deg)";
+      circle.style.transform = rotateSum;
+      rotateValue = rotateSum;
+    }
+  </script>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>
